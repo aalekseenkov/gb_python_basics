@@ -9,6 +9,8 @@
 gain = int(input("Enter gain of your company: "))
 cost = int(input("Enter cost of your company: "))
 if gain > cost:
-    print("The financial result is PROFIT!")
+    profit = gain - cost
+    print(f"The financial result is PROFIT! The value of {profit}...")
 else:
-    print("The financial result is LOSS!")
+    loss = cost - gain
+    print(f"The financial result is LOSS! The value of {loss}...")
