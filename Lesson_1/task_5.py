@@ -11,6 +11,8 @@ cost = int(input("Enter cost of your company: "))
 if gain > cost:
     profit = gain - cost
     print(f"The financial result is PROFIT! The value of {profit}...")
-else:
+elif gain < cost:
     loss = cost - gain
     print(f"The financial result is LOSS! The value of {loss}...")
+else:
+    print(f"The financial result is NO PROFIT/NO LOSS!")

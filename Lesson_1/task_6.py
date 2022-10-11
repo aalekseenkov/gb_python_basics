@@ -15,6 +15,8 @@ if gain > cost:
     employees = int(input("Enter your employees' number: "))
     profit_for_person = profit / employees
     print(f"The company's profit per employee is {profit_for_person}.")
-else:
+elif gain < cost:
     loss = cost - gain
     print(f"The financial result is LOSS! The value of {loss}...")
+else:
+    print(f"The financial result is NO PROFIT/NO LOSS!")
