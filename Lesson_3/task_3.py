@@ -12,13 +12,11 @@
 
 def my_func_v1(*args):
     """my_func_v1() docstring"""
-
     print(sum(sorted(list(args), reverse=True)[:2]))
 
 
 def my_func_v2(*args):
     """my_func_v2() docstring"""
-
     args_lst = list(args)
     i = 0
     result = 0

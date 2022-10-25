@@ -12,7 +12,6 @@
 
 def user(name, surname, birth_year, city, email, phone):
     """pass docstring"""
-
     print(f'{name} {surname} was born in {birth_year} and lives in {city}. '
           f'E-mail: {email}, phone: {phone}.')
 
