@@ -19,7 +19,7 @@ for el in range(1, len(primary_list)):
 print(result_list_1)
 
 # with generator
-result_list_2 = [primary_list[el] for el in range(
-    1, len(primary_list)) if primary_list[el] > primary_list[el - 1]]
+result_list_2 = (primary_list[el] for el in range(
+    1, len(primary_list)) if primary_list[el] > primary_list[el - 1])
 
 print(result_list_2)
