@@ -16,6 +16,7 @@
 Проверить работу примера, создав экземпляр и вызвав описанный метод.
 """
 from time import sleep
+from datetime import datetime as dt
 from dataclasses import dataclass
 import logging
 
@@ -43,5 +44,34 @@ class TrafficLight:
         except ValueError as err:
             logging.exception(err)
 
-my_TrafficLight = TrafficLight()
-my_TrafficLight.running()
+@dataclass
+class TrafficLight2:
+    """TrafficLight2 docstring"""
+    _states = {'red': 7, 'yellow': 2, 'green': 10}
+    _color = ''
+
+    def running(self):
+        """running docstring"""
+        for color, sw_time in self._states.items():
+            self._color = color
+            start_state_time = dt.now()
+
+            print(f"Switched to state '{self._color}' "
+                  f"on {sw_time} seconds")
+
+            sleep(sw_time)
+
+            print(f"Leave state '{self._color}' after "
+                  f"{(dt.now() - start_state_time).seconds} seconds")
+
+print("Starting TrafficLight v1...")
+
+tl = TrafficLight()
+tl.running()
+
+print()
+
+print("Starting TrafficLight v2...")
+
+tl_2 = TrafficLight2()
+tl_2.running()
