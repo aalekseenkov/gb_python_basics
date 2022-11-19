@@ -1,1 +1,1 @@
-## GeekBrains Python Lessons
+## GeekBrains Python.Basics Course Lessons
